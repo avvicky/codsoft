@@ -12,6 +12,7 @@
     "next": "^13.4.12",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-point": "^3.0.1"
+    "react-point": "^3.0.1",
+    "react-textfit": "^1.1.1"
   }
 }
