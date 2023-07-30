@@ -1,10 +1,9 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 
 import Screen from "@/components/Screen";
 import Button from "@/components/Button";
 import ButtonBox from "@/components/ButtonBox";
-import Wrapper from "@/components/Wrapper";
 
 const btnValues = [
   ["C", "+-", "%", "/"],
@@ -143,7 +142,7 @@ const Page = () => {
   };
 
   return (
-    <Wrapper>
+    <>
       <Screen value={calc.num ? calc.num : calc.res} />
       <ButtonBox>
         {btnValues.flat().map((btn, i) => {
@@ -157,7 +156,7 @@ const Page = () => {
           );
         })}
       </ButtonBox>
-    </Wrapper>
+    </>
   );
 };
 

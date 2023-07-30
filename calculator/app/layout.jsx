@@ -16,9 +16,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <div id="wrapper">
-          <div id="app">{children}</div>
-        </div>
+        <div id="wrapper">{children}</div>
       </body>
     </html>
   );

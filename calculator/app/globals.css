@@ -15,7 +15,7 @@ body {
   background-image: linear-gradient(315deg, #f6ddb3 0%, #f3eaae 74%);
 }
 
-.wrapper {
+#wrapper {
   width: 340px;
   height: 540px;
   padding: 10px;
