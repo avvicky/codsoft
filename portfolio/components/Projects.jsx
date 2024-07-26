@@ -14,8 +14,7 @@ const Projects = () => {
           "https://api.github.com/users/avvicky/repos",
           {
             headers: {
-              Authorization:
-                "Bearer "+process.env.GITHUB_TOKEN,
+              Authorization: "Bearer " + process.env.GITHUB_TOKEN,
             },
           }
         );
@@ -44,25 +43,26 @@ const Projects = () => {
     <div id="projects" className="projects-section">
       <h1 className="projects">Projects</h1>
       <div className="cards-container">
-        {reposData.map((item) => (
-          <div
-            className="projects-card"
-            key={item.id}
-            onClick={() => {
-              window.open(item.html_url, "_blank");
-            }}
-          >
-            <div className="project-title">
-              <AiOutlineBook />
-              <p className="project-title">{item.name}</p>
+        {reposData &&
+          reposData.map((item) => (
+            <div
+              className="projects-card"
+              key={item.id}
+              onClick={() => {
+                window.open(item.html_url, "_blank");
+              }}
+            >
+              <div className="project-title">
+                <AiOutlineBook />
+                <p className="project-title">{item.name}</p>
+              </div>
+              <p className="project-desc">{item.description}</p>
+              <div className="project-info">
+                <BsCircleFill color="yellow" />
+                <p className="used-language">{item.language}</p>
+              </div>
             </div>
-            <p className="project-desc">{item.description}</p>
-            <div className="project-info">
-              <BsCircleFill color="yellow" />
-              <p className="used-language">{item.language}</p>
-            </div>
-          </div>
-        ))}
+          ))}
       </div>
     </div>
   );
