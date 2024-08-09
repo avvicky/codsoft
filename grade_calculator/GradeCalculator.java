@@ -70,7 +70,7 @@ public class GradeCalculator extends JFrame implements ActionListener {
         add(resultLabel);
 
         // Set JFrame properties
-        setSize(400, 350);
+        setSize(400, 450);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
     }
